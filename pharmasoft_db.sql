@@ -18,8 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `pharmasoft_db`
+-- Creation de la Base de données : `pharmasoft_db`
 --
+
+CREATE DATABASE IF NOT EXISTS `pharmasoft_db`;
 
 -- --------------------------------------------------------
 
