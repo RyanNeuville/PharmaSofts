@@ -1,1 +1,11 @@
-/.vs*
+# Dossiers de compilation
+bin/
+obj/
+
+# Fichiers de l'IDE (Visual Studio)
+.vs/
+*.suo
+*.user
+
+# Fichiers de log ou temporaires
+*.log

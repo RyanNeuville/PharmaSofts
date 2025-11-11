@@ -25,3 +25,21 @@ Le projet est développé en utilisant les technologies suivantes pour garantir 
 | **Interface Utilisateur / Logique Applicative** | **VB.NET (Visual Basic .NET)** | Développement de l'application de bureau (Windows Forms) |
 | **Serveur Web / Base de Données** | **XAMPP** | Environnement de développement intégrant le serveur web (Apache) et la gestion de la base de données. |
 | **Base de Données** | **MySQL** | Système de gestion de base de données relationnelle pour stocker toutes les informations (médicaments, utilisateurs, ventes, etc.). |
+
+---
+
+## ⚙️ Démarrage Local (Setup)
+
+1.  **Base de Données :** Démarrer **XAMPP** (Apache et MySQL). Importer le fichier `pharmasoft_db.sql` via **phpMyAdmin** pour initialiser la structure et les données de base.
+2.  **Configuration :** Vérifier et ajuster les identifiants de connexion MySQL (hôte, utilisateur, mot de passe) dans le fichier `/Phamasofts/Database/DbConnection.vb`.
+
+## 🤝 Contribuer
+
+Nous accueillons les contributions ! Le projet est développé par :
+
+| Contributeur | Rôle | GitHub |
+| :--- | :--- | :--- |
+| **RyanNeuville** | Développeur| [RyanNeuville](https://github.com/RyanNeuville) |
+| **Mounir** | Développeur | [Mounir-x](https://github.com/Mounir-x) |
+| **Junior** | Développeur | [Junior](https://github.com/NTDJ237) |
+| **Evette** | Développeur | [Evette](https://github.com/Gradayaevette18) |
