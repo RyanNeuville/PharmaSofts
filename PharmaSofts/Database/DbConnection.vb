@@ -9,7 +9,7 @@ Module DbConnection
             conn.Open()
         Catch ex As Exception
             MessageBox.Show("Erreur de connexion à la base de données : " & ex.Message,
-                            "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            "Erreur gar: ", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
         Return conn
     End Function
