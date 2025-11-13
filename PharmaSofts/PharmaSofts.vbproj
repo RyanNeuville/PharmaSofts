@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0D11B5BE-10C3-49E0-8262-B7B095E32454}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>PharmaSofts.PharmacieProfil</StartupObject>
+    <StartupObject>PharmaSofts.FormLogin</StartupObject>
     <RootNamespace>PharmaSofts</RootNamespace>
     <AssemblyName>PharmaSofts</AssemblyName>
     <FileAlignment>512</FileAlignment>
