@@ -26,12 +26,6 @@ Public Class FormLogin
         Me.BackColor = Color.White
         Me.Font = New Font("Segoe UI", 10)
 
-        ' === FOND DÉGRADÉ ===
-        AddHandler Me.Paint, Sub(s, e)
-                                 Using brush As New Drawing2D.LinearGradientBrush(Me.ClientRectangle, Color.FromArgb(52, 152, 219), Color.FromArgb(41, 128, 185), 90)
-                                     e.Graphics.FillRectangle(brush, Me.ClientRectangle)
-                                 End Using
-                             End Sub
 
         ' === PANEL CENTRAL ===
         Dim pnlCentral As New Panel()
@@ -42,27 +36,6 @@ Public Class FormLogin
         pnlCentral.AddShadow()
         Me.Controls.Add(pnlCentral)
 
-        ' === TITRE ===
-        Dim lblTitre As New Label()
-        lblTitre.Text = "Connexion"
-        lblTitre.Font = New Font("Segoe UI", 22, FontStyle.Bold)
-        lblTitre.ForeColor = Color.FromArgb(41, 128, 185)
-        lblTitre.AutoSize = True
-        lblTitre.Location = New Point(130, 40)
-        pnlCentral.Controls.Add(lblTitre)
-
-        ' === ICÔNE ===
-        Dim pbIcon As New Panel()
-        pbIcon.Size = New Size(70, 70)
-        pbIcon.Location = New Point(155, 30)
-        pbIcon.BackColor = Color.FromArgb(41, 128, 185)
-        pbIcon.BorderRadius(35)
-        AddHandler pbIcon.Paint, Sub(s, e)
-                                     Using b As New SolidBrush(Color.White), f As New Font("Segoe UI", 28, FontStyle.Bold)
-                                         e.Graphics.DrawString("+", f, b, 18, 12)
-                                     End Using
-                                 End Sub
-        pnlCentral.Controls.Add(pbIcon)
 
         ' === UTILISATEUR ===
         Dim lblUser As New Label()
@@ -162,6 +135,21 @@ Public Class FormLogin
         pbLoading.ForeColor = Color.White
         pbLoading.Location = New Point(45, 10)
         pnlLoading.Controls.Add(pbLoading)
+
+
+        ' Ajoute le logo centré en haut
+        Dim pbLogoLogin As New PictureBox()
+        pbLogoLogin.Size = New Size(90, 90)
+        pbLogoLogin.Location = New Point((Me.Width - 90) \ 2, 40)
+        pbLogoLogin.SizeMode = PictureBoxSizeMode.Zoom
+        pbLogoLogin.BackColor = Color.Transparent
+        Try
+            pbLogoLogin.Image = My.Resources.pharmasoft1
+        Catch
+            ' Fallback si pas de logo
+        End Try
+        Me.Controls.Add(pbLogoLogin)
+        Me.Controls.SetChildIndex(pbLogoLogin, 0) ' met au-dessus
     End Sub
 
     Private Sub SeConnecter(sender As Object, e As EventArgs)

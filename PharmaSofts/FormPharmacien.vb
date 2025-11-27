@@ -8,6 +8,11 @@ Public Class FormPharmacien
 
     Private lblNom, lblEmail, lblTel As New Label()
     Private txtNom, txtEmail, txtTel As New TextBox()
+
+    Private Sub FormPharmacien_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        UIHelpers.AjouterLogoPetit(Me, 15, 15)
+    End Sub
+
     Private btnValider, btnAnnuler As New Button()
     Private pharmacienId As Integer = -1
 

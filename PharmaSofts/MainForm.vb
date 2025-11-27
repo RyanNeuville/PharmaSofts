@@ -33,6 +33,7 @@ Public Class MainForm
         Me.FormBorderStyle = FormBorderStyle.None
         Me.BackColor = Color.White
 
+
         ' === Panel Menu ===
         panelMenu.Dock = DockStyle.Left
         panelMenu.Width = 220
@@ -176,5 +177,9 @@ Public Class MainForm
         If MessageBox.Show("Voulez-vous vraiment vous déconnecter ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
             Application.Restart()
         End If
+    End Sub
+
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        UIHelpers.AjouterLogoPetit(Me, 15, 15)
     End Sub
 End Class
